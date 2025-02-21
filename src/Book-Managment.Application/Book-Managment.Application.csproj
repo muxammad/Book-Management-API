@@ -2,13 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>Book_Management.Infrastructure</RootNamespace>
+    <RootNamespace>Book_Managment.Application</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="Configurations\" />
-  </ItemGroup>
 
 </Project>
