@@ -11,4 +11,8 @@
     <Folder Include="Configurations\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Book-Managment.Application\Book-Managment.Application.csproj" />
+  </ItemGroup>
+
 </Project>

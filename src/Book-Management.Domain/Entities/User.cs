@@ -3,7 +3,7 @@ using Book_Management.Domain.Enums;
 
 namespace Book_Management.Domain.Entities
 {
-    class User : Auditable
+    public class User : Auditable
     {
         public string Name { get; set; }
         public string Email { get; set; }
