@@ -2,7 +2,7 @@
 {
     public class BookNotFountException : EntityNotFoundException
     {
-        public BookNotFountException(string entityName)
+        public BookNotFountException()
             : base("Book")
         {
         }
