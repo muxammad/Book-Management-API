@@ -4,6 +4,7 @@ using Book_Management.Infrastructure.Persistense;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Book_Management.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250223151912_SeedData12255")]
+    partial class SeedData12255
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -63,7 +66,7 @@ namespace Book_Management.Infrastructure.Migrations
                         {
                             Id = new Guid("d290f1ee-6c54-4b01-90e6-d701748f0851"),
                             Author = "F. Scott Fitzgerald",
-                            CreatedAt = new DateTime(2025, 2, 23, 15, 20, 1, 599, DateTimeKind.Utc).AddTicks(3313),
+                            CreatedAt = new DateTime(2025, 2, 23, 15, 19, 11, 727, DateTimeKind.Utc).AddTicks(8641),
                             IsDeleted = false,
                             PublicationYear = new DateTime(1925, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Title = "The Great Gatsby",
@@ -73,7 +76,7 @@ namespace Book_Management.Infrastructure.Migrations
                         {
                             Id = new Guid("f29b7a7b-4e1d-4f3d-b6b1-85d3e2486e2b"),
                             Author = "George Orwell",
-                            CreatedAt = new DateTime(2025, 2, 23, 15, 20, 1, 599, DateTimeKind.Utc).AddTicks(3329),
+                            CreatedAt = new DateTime(2025, 2, 23, 15, 19, 11, 727, DateTimeKind.Utc).AddTicks(8668),
                             IsDeleted = false,
                             PublicationYear = new DateTime(1949, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Title = "1984",
@@ -83,7 +86,7 @@ namespace Book_Management.Infrastructure.Migrations
                         {
                             Id = new Guid("9b2f74e2-cf32-42bb-8c39-5f8f658a3b99"),
                             Author = "Harper Lee",
-                            CreatedAt = new DateTime(2025, 2, 23, 15, 20, 1, 599, DateTimeKind.Utc).AddTicks(3332),
+                            CreatedAt = new DateTime(2025, 2, 23, 15, 19, 11, 727, DateTimeKind.Utc).AddTicks(8671),
                             IsDeleted = false,
                             PublicationYear = new DateTime(1960, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Title = "To Kill a Mockingbird",
@@ -93,7 +96,7 @@ namespace Book_Management.Infrastructure.Migrations
                         {
                             Id = new Guid("3c1a2e3d-77d5-4e9c-a2b5-0b5c9d7e2f3a"),
                             Author = "Jane Austen",
-                            CreatedAt = new DateTime(2025, 2, 23, 15, 20, 1, 599, DateTimeKind.Utc).AddTicks(3335),
+                            CreatedAt = new DateTime(2025, 2, 23, 15, 19, 11, 727, DateTimeKind.Utc).AddTicks(8683),
                             IsDeleted = false,
                             PublicationYear = new DateTime(1813, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Title = "Pride and Prejudice",
@@ -103,7 +106,7 @@ namespace Book_Management.Infrastructure.Migrations
                         {
                             Id = new Guid("e45a8b9a-5f13-4e59-8a6b-4e8d2f6a3b2d"),
                             Author = "Herman Melville",
-                            CreatedAt = new DateTime(2025, 2, 23, 15, 20, 1, 599, DateTimeKind.Utc).AddTicks(3337),
+                            CreatedAt = new DateTime(2025, 2, 23, 15, 19, 11, 727, DateTimeKind.Utc).AddTicks(8685),
                             IsDeleted = false,
                             PublicationYear = new DateTime(1851, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Title = "Moby-Dick",
@@ -113,7 +116,7 @@ namespace Book_Management.Infrastructure.Migrations
                         {
                             Id = new Guid("a1f4c3e6-8b4f-4c6e-b5a4-2e8b6c3f1d2a"),
                             Author = "J.D. Salinger",
-                            CreatedAt = new DateTime(2025, 2, 23, 15, 20, 1, 599, DateTimeKind.Utc).AddTicks(3339),
+                            CreatedAt = new DateTime(2025, 2, 23, 15, 19, 11, 727, DateTimeKind.Utc).AddTicks(8697),
                             IsDeleted = false,
                             PublicationYear = new DateTime(1951, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Title = "The Catcher in the Rye",
@@ -123,7 +126,7 @@ namespace Book_Management.Infrastructure.Migrations
                         {
                             Id = new Guid("6d9f2b4e-3a4c-4d5e-9a8b-2c6f3b1e8d4a"),
                             Author = "J.R.R. Tolkien",
-                            CreatedAt = new DateTime(2025, 2, 23, 15, 20, 1, 599, DateTimeKind.Utc).AddTicks(3347),
+                            CreatedAt = new DateTime(2025, 2, 23, 15, 19, 11, 727, DateTimeKind.Utc).AddTicks(8699),
                             IsDeleted = false,
                             PublicationYear = new DateTime(1954, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Title = "The Lord of the Rings",
@@ -133,7 +136,7 @@ namespace Book_Management.Infrastructure.Migrations
                         {
                             Id = new Guid("b4e6f9a2-3c1d-4e5b-9a8f-6c3b2d1a4e8b"),
                             Author = "Aldous Huxley",
-                            CreatedAt = new DateTime(2025, 2, 23, 15, 20, 1, 599, DateTimeKind.Utc).AddTicks(3349),
+                            CreatedAt = new DateTime(2025, 2, 23, 15, 19, 11, 727, DateTimeKind.Utc).AddTicks(8703),
                             IsDeleted = false,
                             PublicationYear = new DateTime(1932, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Title = "Brave New World",
@@ -186,22 +189,22 @@ namespace Book_Management.Infrastructure.Migrations
                         new
                         {
                             Id = new Guid("d290f1ee-6c54-4b01-90e6-d701748f0851"),
-                            CreatedAt = new DateTime(2025, 2, 23, 15, 20, 1, 599, DateTimeKind.Utc).AddTicks(3490),
+                            CreatedAt = new DateTime(2025, 2, 23, 15, 19, 11, 727, DateTimeKind.Utc).AddTicks(8857),
                             Email = "Muhammadali@gmail.com",
                             IsDeleted = false,
                             Name = "Muhammadali",
-                            Password = "$2a$11$aYwD4DgvmJtKUeoK4W3bX.mFV4LLpzoPXRN6b2Uy5WLH09giLjqca",
+                            Password = "$2a$11$2crCh1qUoG736tKzGTk5mekdAELancevFHWxQG2.WJsHfrtytc1hS",
                             PhoneNumber = "+998900206000",
                             Role = 0
                         },
                         new
                         {
                             Id = new Guid("f29b7a7b-4e1d-4f3d-b6b1-85d3e2486e2b"),
-                            CreatedAt = new DateTime(2025, 2, 23, 15, 20, 1, 729, DateTimeKind.Utc).AddTicks(4763),
+                            CreatedAt = new DateTime(2025, 2, 23, 15, 19, 11, 849, DateTimeKind.Utc).AddTicks(9141),
                             Email = "alisher@gmail.com",
                             IsDeleted = false,
                             Name = "Alisher",
-                            Password = "$2a$11$M3ErFQwilq0Iucvqk2inaOnOJ29E2/toAGYFcpKeamWmG2zFYHwlC",
+                            Password = "$2a$11$iX74t4DokRsNfek9Hj/0m.AIfZxSQ7tOy1DUJ3V5hfME/IdYbD3e2",
                             PhoneNumber = "+998900205000",
                             Role = 1
                         });

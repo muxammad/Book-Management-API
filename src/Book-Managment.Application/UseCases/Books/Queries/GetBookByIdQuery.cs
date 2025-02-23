@@ -29,7 +29,7 @@ namespace Book_Managment.Application.UseCases.Books.Queries
                 Title = book.Title,
                 Author = book.Author,
                 ViewCount = book.ViewCount,
-                PublicationYear = book.PublicationYear,
+                PublicationYear = book.PublicationYear.Year,
                 PopularityScore = CalculatePopularityScore(book.ViewCount, book.PublicationYear)
             };
 

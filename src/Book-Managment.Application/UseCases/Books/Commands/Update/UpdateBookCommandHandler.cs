@@ -17,7 +17,9 @@ namespace Book_Managment.Application.UseCases.Books.Commands.Update
             book.Title = request.Title;
             book.Author = request.Author;
             book.PublicationYear = request.PublicationYear;
+            book.ViewCount = request.ViewCount;
             book.UpdatedAt = DateTime.UtcNow;
+            book.CreatedAt = book.CreatedAt;
 
             dbContext.Books.Update(book);
             return await dbContext.SaveChangesAsync(cancellationToken) > 0;

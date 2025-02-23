@@ -89,6 +89,7 @@ namespace Book_Management.Infrastructure.Persistense
                     Id = new Guid("d290f1ee-6c54-4b01-90e6-d701748f0851"),
                     Name = "Muhammadali",
                     Email = "Muhammadali@gmail.com",
+                    PhoneNumber = "+998900206000",
                     Password = PasswordHelper.Hash("Admin123"),
                     Role = UserRole.Admin
 
@@ -99,6 +100,7 @@ namespace Book_Management.Infrastructure.Persistense
                     Id = new Guid("f29b7a7b-4e1d-4f3d-b6b1-85d3e2486e2b"),
                     Name = "Alisher",
                     Email = "alisher@gmail.com",
+                    PhoneNumber = "+998900205000",
                     Password = PasswordHelper.Hash("User123"),
                     Role = UserRole.User
                 }
