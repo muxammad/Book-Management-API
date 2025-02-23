@@ -51,14 +51,6 @@ namespace Book_Management.Infrastructure.Persistense
                 },
                 new Book
                 {
-                    Id = new Guid("e45a8b9a-5f13-4e59-8a6b-4e8d2f6a3b2d"),
-                    Title = "Moby-Dick",
-                    Author = "Herman Melville",
-                    PublicationYear = new DateTime(1851, 1, 1),
-                    ViewCount = 90
-                },
-                new Book
-                {
                     Id = new Guid("a1f4c3e6-8b4f-4c6e-b5a4-2e8b6c3f1d2a"),
                     Title = "The Catcher in the Rye",
                     Author = "J.D. Salinger",
