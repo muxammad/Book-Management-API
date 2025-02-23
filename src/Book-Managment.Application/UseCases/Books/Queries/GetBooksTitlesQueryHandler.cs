@@ -11,17 +11,21 @@ namespace Book_Managment.Application.UseCases.Books.Queries
 
         public async Task<List<BookTitleViewModel>> Handle(GetBooksTitlesQuery request, CancellationToken cancellationToken)
         {
-            var books = dbContext.Books
-                .AsNoTracking()
-                .Where(b => !b.IsDeleted).OrderByDescending(b => b.ViewCount * 0.5 + (DateTime.UtcNow.Year - b.PublicationYear.Year) * 2);
-             
-            if (!books.Any())
-                return [];
+            var booksQuery = dbContext.Books
+                             .AsNoTracking()
+                             .Where(b => !b.IsDeleted) 
+                             .OrderByDescending(b => b.ViewCount * 0.5 + (DateTime.UtcNow.Year - b.PublicationYear.Year) * 2); 
 
-            return await books.ToPagedList(request.Params).Select(b => new BookTitleViewModel
-            {
-                Title = b.Title
-            }).ToListAsync(cancellationToken);
+            var pagedBooks = await booksQuery
+                .Skip((request.Params.PageIndex - 1) * request.Params.PageSize) 
+                .Take(request.Params.PageSize) 
+                .Select(b => new BookTitleViewModel
+                {
+                    Title = b.Title
+                })
+                .ToListAsync(cancellationToken); 
+
+            return pagedBooks;
 
         }
     }

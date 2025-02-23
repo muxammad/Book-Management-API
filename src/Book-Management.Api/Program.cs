@@ -1,3 +1,4 @@
+using Book_Management.Api.Extensions;
 using Book_Management.Api.Middlewares;
 using Book_Management.Infrastructure;
 using Book_Managment.Application;
@@ -9,6 +10,7 @@ using System.Reflection;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddApplication();
 
 //builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 
@@ -19,6 +21,8 @@ builder.Services.AddApplication();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+//builder.Services.AddSwaggerWithJwt();
+
 
 var app = builder.Build();
 
@@ -32,6 +36,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+app.UseAuthentication();
 
 app.UseMiddleware<ExceptionHandlerMiddleware>();
 

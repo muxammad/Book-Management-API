@@ -14,7 +14,7 @@ namespace Book_Managment.Application.UseCases.Users.Commands
             var user = await dbContext.Users
             .FirstOrDefaultAsync(u => u.PhoneNumber == request.PhoneNumber, cancellationToken);
 
-            if (user == null || PasswordHelper.Verify(request.Password, user.Password))
+            if (user == null || !PasswordHelper.Verify(request.Password, user.Password))
             {
                 throw new UnauthorizedAccessException("Invalid credentials.");
             }

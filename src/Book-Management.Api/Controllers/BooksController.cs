@@ -3,12 +3,14 @@ using Book_Managment.Application.UseCases.Books.Commands.Delete;
 using Book_Managment.Application.UseCases.Books.Commands.Update;
 using Book_Managment.Application.UseCases.Books.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Book_Management.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    //[Authorize]
     public class BooksController(IMediator mediator) : ControllerBase
     {
         private readonly IMediator mediator = mediator;
